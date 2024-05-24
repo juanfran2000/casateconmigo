@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./ui/global.css";
+import { raleway } from "./ui/fonts";
 
 export const metadata: Metadata = {
   title: "Cásate Conmigo",
@@ -13,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body>{children}</body>
+      <body className={`${raleway.className} antialiased`}>{children}</body>
     </html>
   );
 }
