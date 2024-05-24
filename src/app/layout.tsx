@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./ui/global.css";
 import { raleway } from "./ui/fonts";
+import { NextUIProvider } from "@nextui-org/react";
 
 export const metadata: Metadata = {
   title: "Cásate Conmigo",
@@ -14,7 +15,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={`${raleway.className} antialiased`}>{children}</body>
+      <NextUIProvider>
+        <body className={`${raleway.className} antialiased`}>{children}</body>
+      </NextUIProvider>
     </html>
   );
 }
