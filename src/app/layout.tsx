@@ -15,9 +15,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <NextUIProvider>
-        <body className={`${raleway.className} antialiased`}>{children}</body>
-      </NextUIProvider>
+      <body className={`${raleway.className} antialiased`}>
+        <NextUIProvider>{children}</NextUIProvider>
+      </body>
     </html>
   );
 }
