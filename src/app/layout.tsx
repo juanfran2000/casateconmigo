@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./ui/global.css";
 import { raleway } from "./ui/fonts";
 import { NextUIProvider } from "@nextui-org/react";
+import AdviserContextProvider from "./context/AdviserContext";
 
 export const metadata: Metadata = {
   title: "Cásate Conmigo",
@@ -16,7 +17,9 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body className={`${raleway.className} antialiased`}>
-        <NextUIProvider>{children}</NextUIProvider>
+        <AdviserContextProvider>
+          <NextUIProvider>{children}</NextUIProvider>
+        </AdviserContextProvider>
       </body>
     </html>
   );
