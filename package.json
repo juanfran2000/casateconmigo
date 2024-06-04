@@ -13,7 +13,8 @@
     "framer-motion": "^11.2.6",
     "next": "14.2.3",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-magic-motion": "^1.1.2"
   },
   "devDependencies": {
     "@iconify/json": "^2.2.213",
